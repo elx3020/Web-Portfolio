@@ -20,6 +20,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
+    width: 100%;
 
 }
 
@@ -34,10 +35,10 @@ body{
     flex-direction: row;
     justify-content: flex-end; 
     align-items: center;
-    background: rgb(31, 23, 150);
+    background: white;
     font-size: 1.35rem;
     font-weight: 600;
-    color: white;
+    box-shadow: 0px 10px 30px rgba(16, 74, 139, 0.2);
     z-index: 1;
 
 }
@@ -57,8 +58,8 @@ body{
 
 #nav-bar a{
     
-    color: white;
-    text-shadow: 0px 1px 5px rgb(44, 100, 165);
+    color: rgb(54, 44, 201);
+    text-shadow: 0px 1px 5px rgb(184, 184, 184);
     text-decoration: none;
     border-radius: 10px;
     padding: 0.3rem;
@@ -78,6 +79,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     
 }
 #welcome-section h1{
@@ -113,6 +115,7 @@ body{
     max-width: 1450px;
     margin: 0 auto;
     margin-bottom: 6rem;
+    padding: 1rem;
   }
 
 
