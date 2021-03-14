@@ -181,7 +181,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 2.4rem;
-    margin-top: 10rem;
+    margin-top: 7rem;
 }
 
 .contact-details {
@@ -189,10 +189,26 @@ body{
     font-size: 1.7rem;
 }
 
-.contact-details i {
-    margin-right: 1rem;
-}
 
+
+
+@media(max-width: 640px){
+
+
+    #links h2 {
+        margin: 3rem;
+    }
+
+    .contacts{
+        flex-wrap: wrap;
+    }
+
+    .contact-details{
+        font-size: 1.5rem;
+        padding: 0.4rem;
+    }
+
+}
 .cursor-anim{
     animation-name: anim-cursor;
     animation-duration: 0.9s;
