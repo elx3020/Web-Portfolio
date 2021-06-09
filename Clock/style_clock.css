@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background: linear-gradient(73deg, #19e1ad, #c60f7f, #e3630c);
+    background-size: 600% 600%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+
+
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 10rem;
+}
+
+.clock{
+    position:relative;
+    margin: auto;
+    margin-top: 5rem;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 10px 35px 4px rgba(0,0,0,0.3);
+
+}
+.hand{
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 10px;
+    border-radius: 10px;
+    background: black;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
+}
+/* .center{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    border-radius: 50%;
+}
+ */
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
