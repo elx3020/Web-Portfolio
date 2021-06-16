@@ -1,0 +1,115 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.panels{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    font-size: 2rem;
+}
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 5;
+
+    background-size: cover;
+    background-position: center;
+    transition: font-size 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+                flex 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+                background 0.2s;
+
+            
+}
+
+/* flex-childs */
+
+.panel > *{
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    
+    transition: transform 0.4s;
+}
+
+
+.panel > *:first-child{
+    transform: translateY(-100%);
+}
+.panel.panel-active > *:first-child{ transform: translateY(20%);}
+
+.panel > *:last-child{
+    transform: translateY(100%);
+}
+
+.panel.panel-active > *:last-child{ transform: translateY(-20%);}
+
+
+
+.top{
+    text-align: center;
+}
+
+
+.panel1{
+    background-image: url(./images/first-image.jpg);
+}
+
+.panel2{
+    background-image: url(./images/second-image.jpg);
+
+}
+
+.panel3{
+    background-image: url(./images/thrid-image.jpg);
+}
+
+.panel4{
+    background-image: url(./images/four-image.jpg);
+
+}
+
+.panel5{
+    background-image: url(./images/five-image.jpg);
+}
+
+
+
+.panel.open{
+    flex: 10;
+    font-size: 3rem;
+    
+}
+
+input{
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-style: none;
+    border: 2px solid white;
+    min-height: 50px;
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+
