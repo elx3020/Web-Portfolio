@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold Shift</title>
+</head>
+<body>
+    <h1>Hold Shift to select multiple items.</h1>
+    <div class="listcontainer">
+        <div class="item">
+            <input type="checkbox">
+            <p>This is an inbox layout.</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Check one item</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Hold down your Shift key</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Check a lower item.</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Everything in between should also be set to checked</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Try to it iwth out any libraries</p>
+        </div>
+        
+        <div class="item">
+            <input type="checkbox">
+            <p>Just Regular JavaScript</p>
+        </div>
+        
+        <div class="item">
+            <input type="checkbox">
+            <p>Good Luck!</p>
+        </div>
+        
+        <div class="item">
+            <input type="checkbox">
+            <p>See you next time!</p>
+        </div>
+
+    </div>
+
+
+
+<style>
+
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: rgb(47, 211, 101);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        
+    }
+
+    h1{
+        margin-top: 2rem;
+        color: white;
+    }
+
+    .listcontainer{
+        max-width: 500px;
+        margin: 10rem auto;
+        background-color: aliceblue;
+        border-radius: 5px;
+        box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+
+
+    }
+
+
+
+    .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid rgb(184, 182, 182);
+    }
+
+    input:checked + p {
+      background: #F9F9F9;
+      text-decoration: line-through;
+    }
+
+    input[type="checkbox"]{
+        margin: 15px
+    }
+
+    .item > p {
+        margin: 0;
+        padding: 15px;
+        transition: background 0.2s;
+        flex: 1;
+        font-size: 18px;
+        border-left: 1px solid rgb(184, 182, 182);
+    }
+
+</style>
+
+
+
+
+<script>
+
+const checkboxes = document.querySelectorAll('.listcontainer input[type="checkbox"]');
+
+let lastChecked;
+function handleCheck(e){
+    console.log(e);
+    let inBeween = false;
+    if(e.shiftKey && this.checked){
+
+
+        checkboxes.forEach(item => {
+            if(item === this || item === lastChecked){
+                inBeween = !inBeween;
+            }
+            if(inBeween){
+                item.checked = true;
+            }
+        });
+    }
+    lastChecked = this;
+
+}
+
+
+checkboxes.forEach(item => item.addEventListener('click',handleCheck))
+
+</script>
+</body>
+</html>
