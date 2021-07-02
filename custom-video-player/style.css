@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: linear-gradient(25deg,aqua,green);  
+}
+
+
+.videoplayer{
+
+    position: absolute;
+    margin: 0;
+    width: 1280px;
+    height: 720px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    overflow: hidden;
+}
+
+.player__video{
+    width: 100%
+}
+
+
+
+.player_options{
+    display: flex;
+    flex-direction: column;
+    height: 75px;
+    width: 100%;
+    opacity: 0%;
+    transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* transition : transform cubic-bezier(0.55, 0.055, 0.675, 0.19); */
+    transform: translate(0,-100%);
+    background-color: rgba(0,0, 0, 0.7);
+
+}
+
+.player_options:hover{
+    opacity: 100%;
+
+
+}
+
+
+
+.progress{
+    background: rebeccapurple;
+    width: 100%;
+    flex: 0.7;
+}
+
+.progress__filled{
+    height: 100%;
+    width: 0%;
+    /* transition: width 2s cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+    background-color: yellow;
+}
+
+
+
+.player_buttons{
+    flex: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left_tools{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+
+}
+
+.right_tools{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+.play_button{
+
+    flex: 1;
+
+    font-size: 2rem;
+    color: white;
+    background: black;
+    border: none;
+
+
+}
+
+
+
+.player_slider{
+
+    flex: 3;
+    margin-right: 2rem;
+}
+
+  
+  
+  
+
+.control_button{
+ 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    margin-right: 1rem;
+
+}
