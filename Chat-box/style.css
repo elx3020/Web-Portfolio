@@ -77,7 +77,8 @@ h1{
     border-radius: 15px;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
     padding: 0.7rem;
-    word-wrap:break-word;
+    word-break: break-all;
+    
     animation: messageEnter 0.4s; 
 
 }
@@ -91,6 +92,7 @@ h1{
 }
 .message-content > p{
     display: block;
+    
 }
 
 
