@@ -1,0 +1,174 @@
+*{
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #C7CB85;
+    --third-color: #7EA172;
+    --second-color: #EBBE9B;
+    --four-color: #E7A977;
+    --icon-color: #502419;
+}
+
+
+body{
+    background: linear-gradient(20deg,rgb(224, 67, 67),rgb(75, 57, 238));
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+
+}
+
+.container{
+    max-width: 19vw ;
+    background: var(--main-color);
+    max-height: 70vh;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    transform: translateY(15%);
+    border-radius: 25px;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.4);
+    overflow: hidden;   
+    
+    
+
+}
+
+
+.messageContainer{
+    width: inherit;
+    height: 60vh;
+    overflow: hidden;
+}
+
+
+#messageList{
+    
+    
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    list-style: none;
+    width: 105%;
+    height: 63vh;
+    overflow: scroll;
+    
+
+}
+
+
+#messageList > li{
+    position: relative;
+    max-width: 90%;
+    width: max-content;
+    min-height: 2rem;
+    color: white;
+    font-weight: 600;
+    background: var(--second-color);
+    margin-top: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+    padding: 0.7rem;
+    word-wrap:normal;
+    animation: messageEnter 0.4s; 
+
+}
+
+.message-content{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+.message-content > p{
+    display: block;
+}
+
+
+.time{
+    position: relative;
+    width: auto;
+    left: 100%;
+    transform: translateX(-100%);
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.fa-clock{
+    margin-top: 0.1rem;
+    margin-right: 0.3rem;
+    font-size: 0.6rem;
+}
+
+
+@keyframes messageEnter {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100;
+    }
+    
+}
+
+
+.controls{
+    width: 95%;
+    margin: 1rem auto;
+    height: 9%;
+    background: var(--third-color);
+    display: flex;
+    align-items: center;
+    border-radius: 300px;
+    overflow: hidden;
+    justify-content: space-around;
+    
+
+}
+
+
+input[id=textInput]{
+
+    height: 80%;
+    font-size: 1.1rem;
+    padding: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    border-right: 1px solid rgba(250, 250, 250, 0.5);
+
+
+}
+.fa-paper-plane{
+    color: var(--icon-color);
+}
+
+
+input[id=textInput]:focus{
+    outline: none;
+}
+
+
+#submitButton{
+    font-size: 1.3rem;
+
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+
