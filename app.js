@@ -99,7 +99,7 @@ const horizontalScroll = ({target},distance) =>{
 const checkClick = (e)=>{
   
     horizontalScroll(e,1000);
-    console.log(e);
+    // console.log(e);
 
 
 }
@@ -123,7 +123,7 @@ scrollButtons.forEach(button => {
 const setXscrollSize = (xsection) =>{
     const widthOfChild = 540;
     const xsectionWidth = (xsection.childElementCount / 2) * widthOfChild;
-    console.log(xsectionWidth);
+    // console.log(xsectionWidth);
     if(xsectionWidth > window.innerWidth){
         xsection.style.width = `${xsectionWidth+400}px`;
     }else{
