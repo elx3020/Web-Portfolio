@@ -1,65 +1,60 @@
-*{
-    margin:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-:root{
-
+:root {
 }
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.article{
-    margin: auto;
-    max-width: 95vw;
-    padding: 1rem 3rem;
-    text-align: justify;
+.article {
+  margin: auto;
+  max-width: 95vw;
+  padding: 1rem 3rem;
+  text-align: justify;
 }
 
-.article > h1{
-    font-size: 2.4rem;
-    margin-bottom: 7rem;
+.article > h1 {
+  font-size: 2.4rem;
+  margin-bottom: 7rem;
 }
 
-.bikes-description{
-    height: 90vh;
-    padding: 2rem;
-    border-radius: 30px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    margin-bottom: 10rem;
-    
-    
+.bikes-description {
+  height: 90vh;
+  padding: 2rem;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  margin-bottom: 10rem;
 }
 
 .bikes-description > h1 {
-    font-size: 2.3rem ;
+  font-size: 2.3rem;
 }
 
 .bikes-description > p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
-img{
-    width: 30%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    
-    
-   
-     
+img {
+  width: 30%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.left-align{
-    float: left;
-    margin-right: 3rem;
+.left-align {
+  float: left;
+  margin-right: 3rem;
 }
 
-.right-align{
-    float: right;
-    margin-left: 3rem;
+.right-align {
+  float: right;
+  margin-left: 3rem;
 }
