@@ -93,7 +93,7 @@ const setXscrollSize = (xsection) => {
   const xsectionWidth = (xsection.childElementCount / 2) * widthOfChild;
   // console.log(xsectionWidth);
   if (xsectionWidth > 2000) {
-    xsection.style.width = `${xsectionWidth}px`;
+    xsection.style.width = `${xsectionWidth + 520}px`;
   } else {
     xsection.style.width = `${
       xsection.childElementCount * widthOfChild + 200
