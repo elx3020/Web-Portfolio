@@ -30,8 +30,8 @@
 
         <div class="navbar-top-right">
           <ul>
-            <li><a href="#welcome-section">About</a></li>
-            <li><a href="#projects">Work</a></li>
+            <li><a href="#bio">About</a></li>
+            <li><a href="#web-projects">Work</a></li>
             <li><a href="#links">Contact</a></li>
         </ul>
         </div>
@@ -55,10 +55,21 @@
             <h1>Hi, my name is Esteban,</h1>
             <h2>a Software-Developer. <span class="cursor-anim">|</span></h2>
         </div>
-        <!-- Add a images or animations. know I just leave a div with the size -->
-        <div class="update-div"></div>
+        <div class="intro-image">
+          <img src="./images/yo-web-folio.png" alt="my_photo">
+        </div>
+        
        
       </header>
+
+
+    <div id="bio" class="bio-section">
+      <h2>About me</h2>
+      <div class="bio-content">
+        <p>I'm a nanotechnology engineer, designer, and software programmer. Creating interactive web experiences and passion for science and design. Ocasionally working in useful side-projects.</p>
+      </div>
+      
+    </div>
 
 
       <!-- Content Container -->
@@ -68,9 +79,6 @@
         <section id="web-projects" class="section-format">
           <h2>Front-End Proyects:</h2>
 
-          
-
-           
           <div class="xscroll-container">
 
           <button class="btnscrollX btn-left"><</button>
@@ -80,13 +88,15 @@
 
           <div class="xscroll">
 
-              
+              <!-- Tribute Page  -->
 
           <a href="https://codepen.io/elx3020/pen/NWbzboR" 
             target="_blank" class="project-tile"> 
+            <div class="image-container">
             <img class="project-image" 
             src="https://assets.codepen.io/5842346/internal/screenshots/pens/NWbzboR.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1614764463&width=960"
             alt="project"/>
+          </div>
             <p class="project-title">
               <span class="code">&lt;</span>
               Tribute Page
@@ -99,11 +109,14 @@
     target="_blank"
     class="project-tile"
   >
+  <div class="image-container">
     <img
       class="project-image"
       src="https://assets.codepen.io/5842346/internal/screenshots/pens/BaQPqwE.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1614940023&width=960"
       alt="project"
     />
+
+  </div>
     <p class="project-title">
       <span class="code">&lt;</span>
       Technical Documentation Page
@@ -117,11 +130,13 @@
     target="_blank"
     class="project-tile"
   >
+  <div class="image-container">
     <img
       class="project-image"
       src="https://assets.codepen.io/5842346/internal/screenshots/pens/wvoXLWz.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1614842687&width=960"
       alt="project"
     />
+  </div>
     <p class="project-title">
       <span class="code">&lt;</span>
       Survey Form
@@ -136,11 +151,13 @@
     target="_blank"
     class="project-tile"
   >
+  <div class="image-container">
     <img
       class="project-image"
       src="https://assets.codepen.io/5842346/internal/screenshots/pens/GRNBEOp.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1614940071&width=960"
       alt="project"
     />
+  </div>
     <p class="project-title">
       <span class="code">&lt;</span>
       Product Landing Page
@@ -150,7 +167,10 @@
 
 
 <!-- DrumKit -->
-  <a href="./Drumkit/index.html" target="_blank" class="project-tile"> <img class="project-image" src="./tumbnails/drumkit.png" alt="project"/>
+  <a href="./Drumkit/index.html" target="_blank" class="project-tile">
+    <div class="image-container">
+    <img class="project-image" src="./tumbnails/drumkit.png" alt="project"/>
+  </div>
     <p class="project-title">
       <span class="code">&lt;</span>
       Drum Kit
@@ -158,87 +178,150 @@
     </p>
   </a>
 
-  <!-- Clock -->
 
-  <a href="./Clock/index.html" target="_blank" class="project-tile"> <img class="project-image" src="./tumbnails/clock.png" alt="project"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      Clock
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
-
-  <!-- CSS -- variables -->
-
-  <a href="./css-variables/css-variables.html" target="_blank" class="project-tile"> <img class="project-image" src="./tumbnails/css-variables.png" alt="project"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      Css-Variables
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
-
-  <!-- Flex Galery -->
+</div>
+</div>
 
 
-  <a href="./Flex-Galerie/flex_galery.html" target="_blank" class="project-tile"> <img class="project-image" src="./tumbnails/flex-galery.png" alt="project"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      Flex-Galerie
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
-  <!-- Search Bar -->
 
-  <a href="./ajax-fetch/" target="_blank" class="project-tile"> <img class="project-image" src="./tumbnails/SearchBar.png" alt="project"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      SearchBar
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
+<div class="xscroll-container">
+  <button class="btnscrollX btn-left"><</button>
+  <button class="btnscrollX btn-right">></button>
+          
+  <div class="xscroll">
 
-  <!-- canvas Project -->
 
-  <a href="./CanvasProject/canvas_project.html" target="_blank" class="project-tile"> <img class="project-image" src="./tumbnails/canvas_project.png" alt="canvas_project"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      Draw with Canvas
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
 
-  <!-- weather app -->
-  <a href="./WebAppWeather/index.html" target="_blank" class="project project-tile"> <img class="project-image" src="./tumbnails/weather_app.png" alt="WebAppWeather"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      Weather app 
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
 
-  <!-- Multiple selection -->
 
-  <a href="./Hold_Shift/index.html" target="_blank" class="project project-tile"> <img class="project-image" src="./tumbnails/hold_shift.png" alt="hold_shift"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      Hold Shift select. 
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
+    <!-- Clock -->
 
-  <!-- Custom Video Player -->
-  <a href="./custom-video-player/index.html" target="_blank" class="project project-tile"> <img class="project-image" src="./tumbnails/custom_video_player.png" alt="custom-video-player"/>
-    <p class="project-title">
-      <span class="code">&lt;</span>
-      Custom Video Player
-      <span class="code">&#47;&gt;</span>
-    </p>
-  </a>
+
+    <a href="./Clock/index.html" target="_blank" class="project-tile">
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/clock.png" alt="project"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Clock
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+    <!-- CSS -- variables -->
+
+    <a href="./css-variables/css-variables.html" target="_blank" class="project-tile">
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/css-variables.png" alt="project"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Css-Variables
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+    <!-- Flex Galery -->
+
+
+    <a href="./Flex-Galerie/flex_galery.html" target="_blank" class="project-tile">
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/flex-galery.png" alt="project"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Flex-Galerie
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <!-- Search Bar -->
+
+    <a href="./ajax-fetch/" target="_blank" class="project-tile"> 
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/SearchBar.png" alt="project"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        SearchBar
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+    <!-- canvas Project -->
+
+    <a href="./CanvasProject/canvas_project.html" target="_blank" class="project-tile"> 
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/canvas_project.png" alt="canvas_project"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Draw with Canvas
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+  </div>
+</div>
+
+  
+<div class="xscroll-container">
+
+  <button class="btnscrollX btn-left"><</button>
+  <button class="btnscrollX btn-right">></button>
+  
+    
+
+  <div class="xscroll">
+
+
+
+    
+
+    <!-- weather app -->
+    <a href="./WebAppWeather/index.html" target="_blank" class="project project-tile"> 
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/weather_app.png" alt="WebAppWeather"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Weather app 
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+    <!-- Multiple selection -->
+
+    <a href="./Hold_Shift/index.html" target="_blank" class="project project-tile"> 
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/hold_shift.png" alt="hold_shift"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Hold Shift select. 
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+    <!-- Custom Video Player -->
+    <a href="./custom-video-player/index.html" target="_blank" class="project project-tile"> 
+      <div class="image-container">
+      <img class="project-image" src="./tumbnails/custom_video_player.png" alt="custom-video-player"/>
+    </div>
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Custom Video Player
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+
 
   <!-- Chat-box -->
 
-  <a href="./Chat-box/index.html" target="_blank" class="project project-tile"> <img class="project-image" src="./tumbnails/chat-box.png" alt="chat-box"/>
+  <a href="./Chat-box/index.html" target="_blank" class="project project-tile"> 
+    <div class="image-container">
+    <img class="project-image" src="./tumbnails/chat-box.png" alt="chat-box"/>
+  </div>
     <p class="project-title">
       <span class="code">&lt;</span>
       Chat Box
@@ -247,10 +330,13 @@
   </a>
   <!-- Ajax Request -->
 
-  <a href="./ajax-fetch/index.html" target="_blank" class="project project-tile"> <img class="project-image" src="./tumbnails/chat-box.png" alt="ajax-fetch"/>
+  <a href="./ajax-fetch/index.html" target="_blank" class="project project-tile">
+    <div class="image-container">
+     <img class="project-image" src="./tumbnails/ajax-example.png" alt="ajax-fetch"/>
+    </div>
     <p class="project-title">
       <span class="code">&lt;</span>
-      Chat Box
+      Ajax Example
       <span class="code">&#47;&gt;</span>
     </p>
   </a>
@@ -311,7 +397,7 @@
 
 
          <!-- empties -->
-         <div class="item"></div>
+         
 
           </div>
           
@@ -350,9 +436,6 @@
         </a>
             
 
-
-        <div class="item"></div>
-        <div class="item"></div>
           </div>
             
           </div>
@@ -406,8 +489,6 @@
              <span class="code">&#47;&gt;</span>
            </p>
          </a>
-         
-            <div class="item"></div>
   
             </div>
             

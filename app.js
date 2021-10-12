@@ -75,8 +75,6 @@ const horizontalScroll = ({ target }) => {
     }
   });
   if (target.classList.contains("btn-left") && moveChild.shift != 0) {
-    console.log(moveChild.style.width);
-    console.log(moveChild);
     moveChild.shift += moveChild.clientWidth / 7;
   } else if (
     target.classList.contains("btn-right") &&

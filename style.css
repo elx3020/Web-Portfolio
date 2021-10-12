@@ -8,11 +8,13 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: var(--main-background);
+  overflow-x: hidden;
 }
 
 #nav-bar {
@@ -72,27 +74,35 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
 
 .intro-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 100vh;
+  width: 100vw;
+}
+
+.intro-image {
+  transform: translateY(60px);
+  opacity: 0.8;
+  flex: 0.6;
+  padding: 5rem;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
 }
 
 #welcome-message {
+  flex: 1;
   color: white;
   padding-left: 5rem;
-  flex: 1;
-}
-
-.update-div {
-  flex: 1;
 }
 
 #welcome-message h1 {
@@ -105,17 +115,44 @@ body {
   font-size: 3rem;
 }
 
+/* about me section */
+
+.bio-section {
+  background-color: black;
+  width: 100%;
+  height: 40vw;
+  color: white;
+  padding: 2rem;
+  margin-bottom: 5rem;
+}
+
+.bio-section h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 13rem;
+}
+
+.bio-content {
+  width: 520px;
+  margin: 4rem auto;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
 /* Main Content */
 
 .content-container {
   width: 100%;
+  margin-top: 15rem;
 }
 
 .section-format {
+  margin-top: 5rem;
   width: 100%;
   opacity: 0%;
   transition: all 0.5s ease-in-out 0.2s;
-  transform: translateY(0%); /* Fix weird error  */
+  transform: translateY(0%);
+  /* Fix weird error  */
 }
 
 .section-mover {
@@ -126,9 +163,9 @@ body {
 /* Web Projects */
 
 .section-format > h2 {
-  padding-top: 5rem;
+  padding-top: 0rem;
   padding-left: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
   font-size: 5rem;
   color: wheat;
 }
@@ -137,6 +174,7 @@ body {
   width: 100%;
   overflow: hidden;
   height: 100%;
+  position: relative;
 }
 
 .xscroll {
@@ -144,20 +182,23 @@ body {
   flex-wrap: wrap;
   justify-content: left;
   /* width: 4600px; */
-  padding: 0 3rem 0 3rem;
+  padding: 1rem 0 1rem 0;
   transition: all 0.5s ease-in-out;
 }
 
 .project-tile {
-  width: 500px;
-  margin-right: 40px;
+  width: 450px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 .image-container {
-  width: 520px;
-  height: 320px;
+  margin: auto;
+  width: 450px;
+  height: 250px;
   overflow: hidden;
-  transition: transform 0.2s ease-in;
+  transition: all 0.2s ease-in-out;
 }
 
 .project-image {
@@ -165,15 +206,14 @@ body {
   height: auto;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  transition: transform 0.2s ease-in;
+}
+
+.project-tile:hover {
+  width: 500px;
 }
 
 .image-container:hover {
-  transform: scale(105%);
-}
-
-.project-image:hover {
-  transform: scale(105%);
+  transform: scale(108%);
 }
 
 .project-title {
@@ -200,6 +240,7 @@ body {
   height: 50vh;
   text-align: center;
   color: white;
+  padding: 1rem;
 }
 
 #links h2 {
@@ -239,17 +280,18 @@ body {
 
 .btnscrollX {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   z-index: 2;
-  transform: translateY(70%);
+  transform: translateY(-100%);
   top: 50%;
   border: none;
-  background-color: white;
+  background-color: black;
   border-radius: 50%;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
   font-size: 1.2rem;
   font-weight: 700;
+  color: white;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -257,11 +299,11 @@ body {
   background-color: antiquewhite;
 }
 .btn-left {
-  left: 5%;
+  left: 1%;
 }
 
 .btn-right {
-  left: 90%;
+  right: 1%;
 }
 
 /* For rapid viewing testing */
@@ -271,8 +313,8 @@ body {
 }
 
 .item {
-  width: 520px;
-  height: 320px;
+  width: 450px;
+  height: 250px;
   background-color: antiquewhite;
   margin-right: 40px;
 }
