@@ -1,90 +1,79 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
-body{
-
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
- 
-
-
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container{
-    margin: auto;
-    margin-top: 1rem;
-    height: 900px;
-    width: 900px;
-    background: linear-gradient(73deg, #19e1ad, #c60f7f, #e3630c);
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 8s ease infinite;
-    -moz-animation: AnimationName 8s ease infinite;
-    animation: AnimationName 8s ease infinite;
-    border-radius: 60px;
-    box-shadow: 0px 10px 10px 2px rgba(0,0,0,0.4);
-
+.container {
+  margin: auto;
+  margin-top: 1rem;
+  height: 900px;
+  width: 900px;
+  background: linear-gradient(73deg, #19e1ad, #c60f7f, #e3630c);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+  border-radius: 60px;
+  box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.4);
 }
-h1{
-    padding-top: 3rem;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    font-size: 5rem;
-}
-
-.clock{
-    
-    margin: auto;
-    margin-top: 7rem;
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    border: 20px solid white;
-    box-shadow: 0px 10px 35px 4px rgba(0,0,0,0.3);
-    
-
+h1 {
+  padding-top: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-size: 5rem;
 }
 
-.facecenter{
-    width: 100%;
-    height: 100%;
-    position:relative;
-    border-radius: 50%;
-    transform: translateY(-3px);
-    
+.clock {
+  margin: auto;
+  margin-top: 7rem;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 20px solid white;
+  box-shadow: 0px 10px 35px 4px rgba(0, 0, 0, 0.3);
 }
 
-.center{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 60px;
-    height: 60px;
-    background: black;
-    border-radius: 50%;
-}
-.hand{
-    position: absolute;
-    top: 50%;
-    width: 50%;
-    height: 3px;
-    background: black;
-    transform-origin: 100%;
-    transform: rotate(90deg);
-    transition: all 0.5s;
-    transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
-}
-.minute{
-    height: 7px;
+.facecenter {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  transform: translateY(-3px);
 }
 
-.hour{
-    height: 15px;
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: black;
+  border-radius: 50%;
+}
+.hand {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 3px;
+  background: black;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.minute {
+  height: 7px;
+}
+
+.hour {
+  height: 15px;
 }
 /* .center{
     position: absolute;
@@ -98,20 +87,36 @@ h1{
 }
  */
 
-
-
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+  0% {
+    background-position: 0% 49%;
+  }
+  50% {
+    background-position: 100% 52%;
+  }
+  100% {
+    background-position: 0% 49%;
+  }
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+  0% {
+    background-position: 0% 49%;
+  }
+  50% {
+    background-position: 100% 52%;
+  }
+  100% {
+    background-position: 0% 49%;
+  }
 }
 @keyframes AnimationName {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+  0% {
+    background-position: 0% 49%;
+  }
+  50% {
+    background-position: 100% 52%;
+  }
+  100% {
+    background-position: 0% 49%;
+  }
 }
