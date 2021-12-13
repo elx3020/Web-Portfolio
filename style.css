@@ -399,3 +399,82 @@ body {
     opacity: 1;
   }
 }
+
+/* mobile version */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-top {
+    justify-content: center;
+  }
+
+  .navbar-top-left {
+    display: none;
+    flex: 1;
+  }
+
+  .nav-top-right {
+    flex: 4;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    top: 30vw;
+    margin-bottom: 30vw;
+  }
+
+  #welcome-message h1 {
+    font-size: 4rem;
+  }
+
+  #welcome-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-image {
+    padding: 0;
+    transform: translateY(0px);
+  }
+
+  .bio-section {
+    height: 110vw;
+  }
+
+  .bio-section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+  .bio-content {
+    width: auto;
+  }
+
+  /* projects section */
+
+  .section-format > h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .project-tile {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .image-container {
+    width: 400px;
+    height: 225px;
+  }
+
+  .btnscrollX {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-details {
+    font-size: 1rem;
+  }
+}
