@@ -2,11 +2,9 @@
 
 const navbar = document.querySelector("#nav-bar");
 const horizontalScrollSections = document.querySelectorAll(".section-format");
-const scrollButtons = document.querySelectorAll(".btnscrollX");
 const xScrollableSection = document.querySelectorAll(".xscroll");
-
+const xscrollcontainer = document.querySelectorAll(".xscroll-container");
 // testing
-let test;
 
 // functions
 
@@ -60,60 +58,66 @@ const checkSlide = (e) => {
   });
 };
 
-const horizontalScroll = ({ target }) => {
-  const parentScroll = target.parentNode;
-  const children = parentScroll.childNodes;
-  let moveChild;
+// const horizontalScroll = ({ target }) => {
+//   const parentScroll = target.parentNode;
+//   const children = parentScroll.childNodes;
+//   let moveChild;
 
-  children.forEach((child) => {
-    if ("classList" in child) {
-      if (child.classList.contains("xscroll")) {
-        moveChild = child;
+//   children.forEach((child) => {
+//     if ("classList" in child) {
+//       if (child.classList.contains("xscroll")) {
+//         moveChild = child;
 
-        test = moveChild;
-      }
-    }
-  });
-  if (target.classList.contains("btn-left") && moveChild.shift != 0) {
-    moveChild.shift += moveChild.clientWidth / 7;
-  } else if (
-    target.classList.contains("btn-right") &&
-    Math.abs(moveChild.shift) + window.innerWidth <
-      moveChild.clientWidth - moveChild.clientWidth / 7
-  ) {
-    moveChild.shift -= moveChild.clientWidth / 7;
-  }
-  moveChild.style.transform = `translateX(${moveChild.shift}px)`;
-};
+//         test = moveChild;
+//       }
+//     }
+//   });
+//   if (target.classList.contains("btn-left") && moveChild.shift != 0) {
+//     moveChild.shift += moveChild.clientWidth / 7;
+//   } else if (
+//     target.classList.contains("btn-right") &&
+//     Math.abs(moveChild.shift) + window.innerWidth <
+//       moveChild.clientWidth - moveChild.clientWidth / 7
+//   ) {
+//     moveChild.shift -= moveChild.clientWidth / 7;
+//   }
+//   moveChild.style.transform = `translateX(${moveChild.shift}px)`;
+// };
 
 const setXscrollSize = (xsection) => {
-  const widthOfChild = 520;
-  const xsectionWidth = (xsection.childElementCount / 2) * widthOfChild;
+  const widthOfChild = 485;
+  const offset = 10;
+  const xsectionWidth = xsection.childElementCount * (widthOfChild + offset);
   // console.log(xsectionWidth);
-  if (xsectionWidth > 2000) {
-    xsection.style.width = `${xsectionWidth + 520}px`;
+  xsection.style.width = `${xsectionWidth}px`;
+  if (xsectionWidth > window.innerWidth) {
+    xsection.parentElement.style.overflowX = "scroll";
   } else {
-    xsection.style.width = `${
-      xsection.childElementCount * widthOfChild + 200
-    }px`;
+    xsection.parentElement.style.overflowX = "hidden";
   }
 };
 
-xScrollableSection.forEach((xsection) => {
-  xsection.shift = 0;
-  setXscrollSize(xsection);
-});
-
-const checkClick = (e) => {
-  horizontalScroll(e);
-  // console.log(e);
+const resizediv = () => {
+  xScrollableSection.forEach((xsection) => {
+    xsection.shift = 0;
+    setXscrollSize(xsection);
+  });
 };
+
+resizediv();
+
+// const checkClick = (e) => {
+//   horizontalScroll(e);
+//   // console.log(e);
+// };
 
 // event listeners
 
-window.addEventListener("scroll", debounce(checkSlide, 5, true));
+window.addEventListener("scroll", debounce(checkSlide, 2, true));
+
+window.addEventListener("resize", resizediv);
 
 // for each
-scrollButtons.forEach((button) => {
-  button.addEventListener("click", checkClick);
-});
+// scrollButtons.forEach((button) => {
+//   button.addEventListener("click", checkClick);
+// });
